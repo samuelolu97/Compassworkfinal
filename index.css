@@ -1,0 +1,84 @@
+ body {
+        display: flex;
+        background:black;        flex-direction: column;
+        height: 100vh;
+      }
+
+      .compass {
+     
+        position: relative;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        margin: auto;
+      }
+
+      .compass > .arrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-style: solid;
+        border-width: 30px 20px 0 20px;
+        border-color: red transparent transparent transparent;
+        z-index: 1;
+      }
+
+      .compass > .compass-circle,
+      .compass > .my-point {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        border-radius:50% ;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease-out;
+        background: url(test-compass.png)
+          center no-repeat;
+        background-size: contain;
+      }
+      
+      
+  
+
+      .compass > .my-point {
+        opacity: 0;
+        width: 55%;
+        height: 55%;
+        background: rgb(8, 223, 69);
+        border-radius: 50%;
+        transition: opacity 0.5s ease-out;
+           background: conic-gradient(
+                var(--sector-color) var(--start-angle, 0deg) var(--end-angle, 45deg),
+                transparent var(--end-angle, 45deg) 360deg
+            );
+           
+      }
+
+      .start-btn {
+        margin-bottom: auto;
+      }
+
+      input {
+        width: 40%;
+        padding: 0.4rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        margin: auto;
+            }
+
+
+.compassangle{
+    margin:auto;
+    color:white;
+    font-size: 1rem;
+}
+
+#latlong{
+    margin:auto;
+    color:white;
+    font-size: 1rem;
+}
